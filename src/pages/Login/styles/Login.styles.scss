@@ -1,0 +1,24 @@
+@import "../../../assets/styles/styles.scss";
+
+.label {
+  color: $primary-color;
+}
+
+.input {
+  border-color: $primary-color;
+}
+
+/* Login.styles.scss */
+
+.login-form .login-btn {
+  background-color: $primary-color; /* Custom color for Login button */
+  color: #ffffff; /* Text color for Login button */
+}
+
+.login-text {
+  color: $primary-color;
+}
+
+.background {
+  background-color: $primary-color;
+}

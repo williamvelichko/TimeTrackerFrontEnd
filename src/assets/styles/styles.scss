@@ -1,0 +1,21 @@
+// Import Bootstrap's SCSS file
+@import "~bootstrap/scss/bootstrap";
+
+// Colors
+$primary-color: #5603ad;
+$secondary-color: #ffffff;
+$third-primary: #b3e9c7;
+
+// Your custom styles
+body {
+  font-family: "Arial", sans-serif;
+  min-height: 100vh; // Ensure body takes at least the full viewport height
+  margin: 0; // Remove default margin
+  padding: 0; // Remove default padding
+}
+
+.container {
+  height: calc(
+    100% - 100vh
+  ); // Calculate height as percentage relative to viewport height
+}
