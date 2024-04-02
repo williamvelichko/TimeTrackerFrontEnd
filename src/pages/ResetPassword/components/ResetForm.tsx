@@ -4,7 +4,6 @@ import "../styles/ResetPassword.styles.scss";
 export const ResetForm: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Logic to handle form submission (e.g., sending a request)
   };
 
   return (

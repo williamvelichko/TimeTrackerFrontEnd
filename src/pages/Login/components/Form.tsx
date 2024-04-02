@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Login.styles.scss";
 
-export const LoginForm = () => {
+export const LoginForm: React.FC = () => {
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const handleLogin = (e: any) => {
+    e.preventDefault();
+    if (!form.email || !form.password) {
+      alert("Please fill in both fields.");
+      return;
+    }
+  };
+
   return (
     <form className="login-form w-75">
       <div className="mb-3">
-        <label htmlFor="username" className="form-label">
+        <label htmlFor="email" className="form-label">
           Email:
         </label>
         <input
           type="text"
           className="form-control"
-          id="username"
-          name="username"
+          id="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
         />
       </div>
 
@@ -25,6 +44,8 @@ export const LoginForm = () => {
           className="form-control"
           id="password"
           name="password"
+          value={form.password}
+          onChange={handleChange}
         />
         <div className="mb-3 text-end">
           <a className="btn btn-link fs-6" href="/reset-password">
@@ -33,7 +54,11 @@ export const LoginForm = () => {
         </div>
       </div>
 
-      <button type="submit" className="btn login-btn w-100 mb-2">
+      <button
+        type="submit"
+        className="btn login-btn w-100 mb-2"
+        onSubmit={handleLogin}
+      >
         Login
       </button>
       <div className="text-center">
