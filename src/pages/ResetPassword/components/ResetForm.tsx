@@ -7,10 +7,7 @@ export const ResetForm: React.FC = () => {
   };
 
   return (
-    <form
-      className=" reset-password-form w-100 w-md-50"
-      onSubmit={handleSubmit}
-    >
+    <form className="reset-password-form " onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
           Email address
@@ -23,7 +20,7 @@ export const ResetForm: React.FC = () => {
           required
         />
       </div>
-      <button type="submit" className="btn reset-btn w-100 color-white">
+      <button type="submit" className="btn reset-btn w-100 ">
         Send Reset Link
       </button>
     </form>
