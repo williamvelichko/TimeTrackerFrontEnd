@@ -63,7 +63,7 @@ export const LoginForm: React.FC = () => {
       </button>
       <div className="text-center">
         <p className="mb-0">
-          Don't have an account? <a href="#">Signup</a>
+          Don't have an account? <a href="/register">Signup</a>
         </p>
       </div>
     </form>
