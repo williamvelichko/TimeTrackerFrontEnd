@@ -1,24 +1,17 @@
 @import "../../../assets/styles/styles.scss";
 
-.label {
-  color: $primary-color;
-}
-
-.input {
-  border-color: $primary-color;
-}
-
-/* Login.styles.scss */
-
 .login-form .login-btn {
-  background-color: $primary-color; /* Custom color for Login button */
-  color: #ffffff; /* Text color for Login button */
+  background-color: $primary-color;
+  color: #ffffff;
+  transition: border-color 0.5s, color 0.5s;
+
+  &:hover {
+    border-color: $primary-color;
+    color: $primary-color;
+    background-color: #ffffff;
+  }
 }
 
 .login-text {
   color: $primary-color;
-}
-
-.background {
-  background-color: $primary-color;
 }

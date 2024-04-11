@@ -17,7 +17,7 @@ export const RegisterForm: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
-    setErrors({ ...errors, [name]: "" }); // Clear the error when input changes
+    setErrors({ ...errors, [name]: "" });
   };
 
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,7 +31,11 @@ export const RegisterForm: React.FC = () => {
   };
 
   return (
-    <form className="register-form w-75" onSubmit={handleRegister}>
+    <form
+      className="register-form needs-validation w-75"
+      onSubmit={handleRegister}
+      noValidate
+    >
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
           Email:
