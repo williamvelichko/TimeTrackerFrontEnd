@@ -1,7 +1,7 @@
 import React from "react";
 import { ResetForm } from "./components/ResetForm";
 
-const ResetPassword = () => {
+const ResetPassword: React.FC = () => {
   return (
     <div className="d-flex justify-content-center flex-column align-items-center h-100 w-100">
       <div className="w-100 d-flex justify-content-center">

@@ -20,7 +20,7 @@ export const ResetForm: React.FC = () => {
           required
         />
       </div>
-      <button type="submit" className="btn reset-btn w-100 ">
+      <button type="submit" className="btn reset-btn w-100">
         Send Reset Link
       </button>
     </form>

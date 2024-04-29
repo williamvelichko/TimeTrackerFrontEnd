@@ -1,35 +1,39 @@
 import React, { useState } from "react";
-import "../styles/Login.styles.scss";
+import "../styles/Register.styles.scss";
 import { validateForm, FormErrors } from "../services/formValidation";
 
-export const LoginForm: React.FC = () => {
+export const RegisterForm: React.FC = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
   });
-
   const [errors, setErrors] = useState<FormErrors>({
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: "" });
   };
-  const handleLogin = (e: any) => {
+
+  const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formErrors = validateForm(form);
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       return;
     }
+    console.log("Registering user:", form);
   };
+
   return (
     <form
-      className="login-form needs-validation w-75"
-      onSubmit={handleLogin}
+      className="register-form needs-validation w-75"
+      onSubmit={handleRegister}
       noValidate
     >
       <div className="mb-3">
@@ -37,15 +41,14 @@ export const LoginForm: React.FC = () => {
           Email:
         </label>
         <input
-          type="text"
+          type="email"
           className={`form-control ${errors.email && "is-invalid"}`}
           id="email"
           name="email"
           value={form.email}
           onChange={handleChange}
-          required
         />
-        <div className="invalid-feedback">{errors.email}</div>
+        {errors.email && <div className="invalid-feedback">{errors.email}</div>}
       </div>
 
       <div className="mb-3">
@@ -59,22 +62,36 @@ export const LoginForm: React.FC = () => {
           name="password"
           value={form.password}
           onChange={handleChange}
-          required
         />
-        <div className="invalid-feedback">{errors.password}</div>
-        <div className="mb-3 text-end">
-          <a className="btn btn-link fs-6" href="/reset-password">
-            Forgot Password?
-          </a>
-        </div>
+        {errors.password && (
+          <div className="invalid-feedback">{errors.password}</div>
+        )}
       </div>
 
-      <button type="submit" className="btn login-btn w-100 mb-2">
-        Login
+      <div className="mb-3">
+        <label htmlFor="confirmPassword" className="form-label">
+          Confirm Password:
+        </label>
+        <input
+          type="password"
+          className={`form-control ${errors.confirmPassword && "is-invalid"}`}
+          id="confirmPassword"
+          name="confirmPassword"
+          value={form.confirmPassword}
+          onChange={handleChange}
+        />
+        {errors.confirmPassword && (
+          <div className="invalid-feedback">{errors.confirmPassword}</div>
+        )}
+      </div>
+
+      <button type="submit" className="btn signup-btn w-100 mb-2">
+        Sign Up
       </button>
+
       <div className="text-center">
         <p className="mb-0">
-          Don't have an account? <a href="/register">Signup</a>
+          Already have an account? <a href="/login">Login</a>
         </p>
       </div>
     </form>
