@@ -1,0 +1,11 @@
+@import "../../../assets/styles/styles.scss";
+
+.btn-create {
+  background-color: $primary-color;
+  color: $secondary-color;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+}

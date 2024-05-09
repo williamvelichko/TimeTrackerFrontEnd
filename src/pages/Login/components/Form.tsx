@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../styles/Login.styles.scss";
 import { validateForm, FormErrors } from "../services/formValidation";
+import { login } from "../../../services/auth.service";
+import useAuth from "../../../hooks/useAuth";
 
 export const LoginForm: React.FC = () => {
+  const { saveToken } = useAuth();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -13,17 +16,24 @@ export const LoginForm: React.FC = () => {
     password: "",
   });
 
+  const credentials = {
+    email: form.email,
+    password: form.password,
+  };
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: "" });
   };
-  const handleLogin = (e: any) => {
+  const handleLogin = async (e: any) => {
     e.preventDefault();
     const formErrors = validateForm(form);
-    if (Object.keys(formErrors).length > 0) {
+    const hasErrors = Object.values(formErrors).some((error) => error !== "");
+    if (!hasErrors) {
+      const result = await login(credentials);
+      saveToken(result.access_token);
+    } else {
       setErrors(formErrors);
-      return;
     }
   };
   return (

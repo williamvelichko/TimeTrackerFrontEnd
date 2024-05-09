@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../styles/Register.styles.scss";
 import { validateForm, FormErrors } from "../services/formValidation";
-
+import { signUp } from "../../../services/auth.service";
+import useAuth from "../../../hooks/useAuth";
 export const RegisterForm: React.FC = () => {
+  const { saveToken } = useAuth();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -14,20 +16,28 @@ export const RegisterForm: React.FC = () => {
     confirmPassword: "",
   });
 
+  const credentials = {
+    email: form.email,
+    password: form.password,
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: "" });
   };
 
-  const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formErrors = validateForm(form);
-    if (Object.keys(formErrors).length > 0) {
+    const hasErrors = Object.values(formErrors).some((error) => error !== "");
+
+    if (!hasErrors) {
+      const result = await signUp(credentials);
+      saveToken(result.access_token);
+    } else {
       setErrors(formErrors);
-      return;
     }
-    console.log("Registering user:", form);
   };
 
   return (
