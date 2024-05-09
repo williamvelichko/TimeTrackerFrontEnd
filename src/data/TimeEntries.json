@@ -1,23 +1,47 @@
 [
   {
+    "index": 1,
     "summary": "Worked on login page",
     "project": "timeTracker",
     "date": "01/12/24",
     "timeStart": "12:00Pm",
-    "timeEnd": "4:00Pm"
+    "timeEnd": "4:00Pm",
+    "totalTime": "4"
   },
   {
+    "index": 2,
     "summary": "Worked on login page",
     "project": "timeTracker",
     "date": "01/12/24",
     "timeStart": "12:00Pm",
-    "timeEnd": "4:00Pm"
+    "timeEnd": "4:00Pm",
+    "totalTime": "4"
   },
   {
+    "index": 3,
     "summary": "Worked on login page",
     "project": "timeTracker",
     "date": "01/12/24",
     "timeStart": "12:00Pm",
-    "timeEnd": "4:00Pm"
+    "timeEnd": "4:00Pm",
+    "totalTime": "4"
+  },
+  {
+    "index": 4,
+    "summary": "Worked on login page",
+    "project": "timeTracker",
+    "date": "01/12/24",
+    "timeStart": "12:00Pm",
+    "timeEnd": "4:00Pm",
+    "totalTime": "4"
+  },
+  {
+    "index": 5,
+    "summary": "Worked on login page",
+    "project": "timeTracker",
+    "date": "01/12/24",
+    "timeStart": "12:00Pm",
+    "timeEnd": "4:00Pm",
+    "totalTime": "4"
   }
 ]

@@ -9,3 +9,34 @@
     width: 30%;
   }
 }
+
+/* TimeCard.styles.scss */
+.card .time-label {
+  font-weight: bold;
+}
+
+.card .row {
+  margin-bottom: 1rem;
+}
+
+.card .border {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background-color: black;
+}
+
+.card .time-label {
+  font-weight: bold;
+}
+
+.card .col {
+  margin-bottom: 1rem;
+}
+
+/* Optional: Add additional styles for responsiveness */
+@media (min-width: 768px) {
+  .card .col {
+    margin-bottom: 0;
+  }
+}

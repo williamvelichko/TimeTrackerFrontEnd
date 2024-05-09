@@ -4,7 +4,7 @@ import "./../styles/TimeTracker.styles.scss";
 const CreateEntrie = () => {
   return (
     <div className="container">
-      <div className="row">
+      <div className="row d-flex justify-content-evenly">
         <div className="row">
           <div className="col-md-6 mb-3">
             <label htmlFor="summary" className="form-label">
