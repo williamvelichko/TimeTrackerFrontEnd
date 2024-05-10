@@ -4,19 +4,54 @@ import Login from "./pages/Login/Login";
 import ResetPassword from "./pages/ResetPassword/ResetPassword";
 import Register from "./pages/Register/Register";
 import TimeTracker from "./pages/TimeTracker/TimeTracker";
+import Layout from "./Layout";
+import AuthLayout from "./AuthLayout";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App vh-100">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
-          <Route path="/timeTracker" element={<TimeTracker />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <AuthLayout>
+              <Login />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <AuthLayout>
+              <Login />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <AuthLayout>
+              <Register />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/reset-password"
+          element={
+            <AuthLayout>
+              <ResetPassword />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/timeTracker"
+          element={
+            <Layout>
+              <TimeTracker />
+            </Layout>
+          }
+        />
+      </Routes>
     </Router>
   );
 };

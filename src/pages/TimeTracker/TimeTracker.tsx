@@ -4,7 +4,7 @@ import ViewEntries from "./components/ViewEntries";
 
 const TimeTracker = () => {
   return (
-    <div className="container mt-4">
+    <div className="container ">
       <div className="col">
         <div className="col">
           <CreateEntrie />

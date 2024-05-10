@@ -1,6 +1,13 @@
 @import "../../../assets/styles/styles.scss";
 
-.btn-create {
+.createEntrie {
+  background-color: #f8f9fa;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.createEntrie .btn-create {
   background-color: $primary-color;
   color: $secondary-color;
   width: 100%;
@@ -25,6 +32,10 @@
 .card-head {
   background-color: #f8f9fa;
   border-bottom: 1px solid #eaeaea;
+}
+
+.time-type {
+  font-weight: bold;
 }
 
 .card-mid,

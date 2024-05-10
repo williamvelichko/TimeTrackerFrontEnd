@@ -19,21 +19,21 @@ const TimeCard: React.FC<{ time: TimeEntry }> = ({ time }) => {
       <div className="card-body">
         <div className="row">
           <div className="col-6">
-            <p className="mb-1 font-weight-bold">Project:</p>
+            <p className="mb-1 time-type">Project:</p>
             <p className="mb-0">{time.project}</p>
           </div>
           <div className="col-6">
-            <p className="mb-1 font-weight-bold">Date:</p>
+            <p className="mb-1 time-type">Date:</p>
             <p className="mb-0">{time.date}</p>
           </div>
         </div>
         <div className="row mt-3">
           <div className="col-6">
-            <p className="mb-1 font-weight-bold">Time Start:</p>
+            <p className="mb-1 time-type">Time Start:</p>
             <p className="mb-0">{time.timeStart}</p>
           </div>
           <div className="col-6">
-            <p className="mb-1 font-weight-bold">Time End:</p>
+            <p className="mb-1 time-type">Time End:</p>
             <p className="mb-0">{time.timeEnd}</p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const TimeCard: React.FC<{ time: TimeEntry }> = ({ time }) => {
         <p className="mb-0 font-weight-bold">{time.totalTime} Hours</p>
         <div className="dropdown">
           <button
-            className="btn btn-sm btn-outline-secondary dropdown-toggle"
+            className="options-btn btn btn-sm btn-outline-secondary dropdown-toggle"
             type="button"
             id="dropdownMenuButton"
             data-bs-toggle="dropdown"
