@@ -6,7 +6,7 @@
     "date": "01/12/24",
     "timeStart": "12:00Pm",
     "timeEnd": "4:00Pm",
-    "totalTime": "4"
+    "totalTime": "04:00:00"
   },
   {
     "index": 2,
@@ -15,7 +15,7 @@
     "date": "01/12/24",
     "timeStart": "12:00Pm",
     "timeEnd": "4:00Pm",
-    "totalTime": "4"
+    "totalTime": "04:00:00"
   },
   {
     "index": 3,
@@ -24,7 +24,7 @@
     "date": "01/12/24",
     "timeStart": "12:00Pm",
     "timeEnd": "4:00Pm",
-    "totalTime": "4"
+    "totalTime": "04:00:00"
   },
   {
     "index": 4,
@@ -33,7 +33,7 @@
     "date": "01/12/24",
     "timeStart": "12:00Pm",
     "timeEnd": "4:00Pm",
-    "totalTime": "4"
+    "totalTime": "04:00:00"
   },
   {
     "index": 5,
@@ -42,6 +42,6 @@
     "date": "01/12/24",
     "timeStart": "12:00Pm",
     "timeEnd": "4:00Pm",
-    "totalTime": "4"
+    "totalTime": "04:00:00"
   }
 ]
