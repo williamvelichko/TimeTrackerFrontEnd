@@ -1,9 +1,9 @@
 import React from "react";
 import "./../styles/TimeTracker.styles.scss";
 
-const CreateEntrie = () => {
+const CreateEntry = () => {
   return (
-    <div className="createEntrie container p-4">
+    <div className="createEntry container p-4">
       <div className="row d-flex justify-content-evenly">
         <div className="row">
           <div className="col-md-6 mb-3">
@@ -47,4 +47,4 @@ const CreateEntrie = () => {
   );
 };
 
-export default CreateEntrie;
+export default CreateEntry;

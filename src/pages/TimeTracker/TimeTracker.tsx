@@ -1,5 +1,5 @@
 import React from "react";
-import CreateEntrie from "./components/CreateEntrie";
+import CreateEntry from "./components/CreateEntry";
 import ViewEntries from "./components/ViewEntries";
 
 const TimeTracker = () => {
@@ -7,7 +7,7 @@ const TimeTracker = () => {
     <div className="container ">
       <div className="col">
         <div className="col">
-          <CreateEntrie />
+          <CreateEntry />
         </div>
         <div className="col">
           <ViewEntries />
