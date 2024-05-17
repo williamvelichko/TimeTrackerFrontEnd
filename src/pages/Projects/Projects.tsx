@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
     <div className="projects-container">
       <h1 className="projects-title">Projects</h1>
       <button
-        className="btn btn-primary mb-3"
+        className="create-project-btn btn mb-3"
         onClick={() => setShowCreateDialog(true)}
       >
         Create New Project

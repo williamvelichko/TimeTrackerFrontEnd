@@ -5,8 +5,11 @@
   padding: 20px;
 
   .projects-title {
-    color: $primary-color;
+    color: black;
     margin-bottom: 20px;
+  }
+  .create-project-button {
+    background-color: $primary-color;
   }
 
   .create-project-button {

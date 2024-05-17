@@ -29,10 +29,7 @@ const ProjectsPage = () => {
   return (
     <div className="projects-container">
       <h1 className="projects-title">Users</h1>
-      <button
-        className="btn btn-primary"
-        onClick={() => setShowCreateDialog(true)}
-      >
+      <button className="btn" onClick={() => setShowCreateDialog(true)}>
         Create New User
       </button>
 
@@ -40,7 +37,6 @@ const ProjectsPage = () => {
 
       <div className="table-responsive">
         {" "}
-        {/* Add Bootstrap's responsive class */}
         <table className="table">
           <thead>
             <tr>
