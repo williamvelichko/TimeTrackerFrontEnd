@@ -8,9 +8,6 @@
     color: black;
     margin-bottom: 20px;
   }
-  .create-project-button {
-    background-color: $primary-color;
-  }
 
   .create-project-button {
     background-color: $primary-color;
@@ -19,14 +16,14 @@
     padding: 10px 20px;
     margin-bottom: 20px;
     cursor: pointer;
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
-    }
   }
 
   .create-project-dialog {
-    margin-bottom: 20px;
+    padding: 20px;
+    background-color: $tertiary-primary;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     input {
       padding: 10px;
@@ -39,7 +36,7 @@
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-
+      margin-top: 5px;
       &:hover {
         background-color: darken($primary-color, 10%);
       }

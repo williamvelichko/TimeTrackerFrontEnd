@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Users.styles.scss";
-import CreateUserForm from "./components/CreateUserForm"; // Import the CreateUserForm component
+import CreateUserForm from "./components/CreateUserForm";
 import UsersObject from "../../data/Users.json";
 interface User {
   name: string;
@@ -29,11 +29,17 @@ const ProjectsPage = () => {
   return (
     <div className="projects-container">
       <h1 className="projects-title">Users</h1>
-      <button className="btn" onClick={() => setShowCreateDialog(true)}>
-        Create New User
-      </button>
 
-      {showCreateDialog && <CreateUserForm onCreateUser={handleCreateUser} />}
+      {showCreateDialog ? (
+        <CreateUserForm onCreateUser={handleCreateUser} />
+      ) : (
+        <button
+          className="create-user-button btn"
+          onClick={() => setShowCreateDialog(true)}
+        >
+          Create New User
+        </button>
+      )}
 
       <div className="table-responsive">
         {" "}

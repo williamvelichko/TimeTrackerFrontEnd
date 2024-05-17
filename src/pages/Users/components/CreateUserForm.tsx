@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Users.styles.scss";
 
 interface User {
   name: string;
@@ -22,32 +23,27 @@ const CreateUserForm: React.FC<Props> = ({ onCreateUser }) => {
   };
 
   return (
-    <div>
-      <h2>Create New User</h2>
+    <div className="create-user-dialog">
+      <input
+        id="name"
+        type="text"
+        value={newUserName}
+        onChange={(e) => setNewUserName(e.target.value)}
+        className="form-control"
+        placeholder="Enter name"
+      />
+
+      <input
+        id="email"
+        type="email"
+        value={newUserEmail}
+        onChange={(e) => setNewUserEmail(e.target.value)}
+        className="form-control"
+        placeholder="Enter email address"
+      />
+
       <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          type="text"
-          value={newUserName}
-          onChange={(e) => setNewUserName(e.target.value)}
-          className="form-control"
-          placeholder="Enter name"
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email Address:</label>
-        <input
-          id="email"
-          type="email"
-          value={newUserEmail}
-          onChange={(e) => setNewUserEmail(e.target.value)}
-          className="form-control"
-          placeholder="Enter email address"
-        />
-      </div>
-      <div>
-        <button className="btn btn-primary" onClick={handleCreateUser}>
+        <button className="create-button btn" onClick={handleCreateUser}>
           Create
         </button>
       </div>
