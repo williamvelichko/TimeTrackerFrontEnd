@@ -1,0 +1,33 @@
+@import "../../../assets/styles/styles.scss";
+
+.projects-container {
+  padding: 20px;
+
+  .projects-title {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .modal-body input {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    margin-top: 20px;
+
+    th {
+      background-color: $primary-color;
+      color: $accent-color;
+    }
+
+    td button {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    td button:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+    }
+  }
+}
