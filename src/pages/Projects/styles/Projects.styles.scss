@@ -1,0 +1,65 @@
+@import "../../../assets/styles/styles.scss";
+
+.projects-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+
+  .projects-title {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .create-project-button {
+    background-color: $primary-color;
+    color: $accent-color;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .create-project-dialog {
+    margin-bottom: 20px;
+
+    input {
+      padding: 10px;
+      margin-right: 10px;
+    }
+
+    .create-button {
+      background-color: $primary-color;
+      color: $accent-color;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .projects-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $tertiary-primary;
+      padding: 10px;
+    }
+
+    th {
+      background-color: $primary-color;
+      color: $accent-color;
+    }
+
+    tr:nth-child(even) {
+      background-color: $tertiary-primary;
+    }
+  }
+}
