@@ -1,0 +1,67 @@
+@import "../../../assets/styles/styles.scss";
+
+.projects-container {
+  padding: 20px;
+
+  .create-user-button {
+    background-color: $primary-color;
+    color: $accent-color;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .projects-title {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .modal-body input {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid $tertiary-primary;
+      padding: 10px;
+    }
+
+    th {
+      background-color: $primary-color;
+      color: $accent-color;
+    }
+
+    tr:nth-child(even) {
+      background-color: $tertiary-primary;
+    }
+  }
+
+  .create-user-dialog {
+    padding: 20px;
+    background-color: $tertiary-primary;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    input {
+      margin-top: 5px;
+    }
+
+    .create-button {
+      background-color: $primary-color;
+      color: $accent-color;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 5px;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

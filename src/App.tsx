@@ -6,6 +6,8 @@ import Register from "./pages/Register/Register";
 import TimeTracker from "./pages/TimeTracker/TimeTracker";
 import Layout from "./Layout";
 import AuthLayout from "./AuthLayout";
+import Projects from "./pages/Projects/Projects";
+import Users from "./pages/Users/Users";
 
 const App: React.FC = () => {
   return (
@@ -48,6 +50,22 @@ const App: React.FC = () => {
           element={
             <Layout>
               <TimeTracker />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <Layout>
+              <Projects />
+            </Layout>
+          }
+        />
+        <Route
+          path="/users"
+          element={
+            <Layout>
+              <Users />
             </Layout>
           }
         />
